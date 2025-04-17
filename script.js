@@ -60,3 +60,4 @@ function setDailyUpdate() {
 
 
 setDailyUpdate();
+const currentDate = new Date().toLocaleDateString('en-CA');  // 2024.04.17
