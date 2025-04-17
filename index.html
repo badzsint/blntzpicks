@@ -1,51 +1,24 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlntzPicks by ChatGpt</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: 'Times New Roman', serif;
-      margin: 0;
-      padding: 0;
-    }
-    .popup {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: red;
-      padding: 20px;
-      border-radius: 10px;
-      z-index: 999;
-    }
-    .popup button {
-      background-color: black;
-      color: white;
-      margin: 5px;
-      padding: 10px 15px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlntzPicks by ChatGpt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="popup">
-    Üdv a BlntZ Picks By ChatGpt oldalon az oldal teljes tartalmához jelentkezz be vagy regisztrálj,<br>
-    de ha csak napi 2 tippet szeretnél megnézni akkor nyomj a tippek megtekintése gombra!
-    <div>
-      <button>Bejelentkezés</button>
-      <button>Regisztráció</button>
-      <button>Tippek megtekintése</button>
+    
+    <div id="popup" class="popup">
+        <p>Üdv a BlntZ Picks By ChatGpt oldalon!</p>
+        <p>Az oldal teljes tartalmához jelentkezz be vagy regisztrálj, de ha csak napi 2 tippet szeretnél megnézni, nyomj a 'Tippek megtekintése' gombra!</p>
+        <button class="popup-btn" onclick="showLogin()">Bejelentkezés</button>
+        <button class="popup-btn" onclick="showRegister()">Regisztráció</button>
+        <button class="popup-btn" onclick="viewTips()">Tippek megtekintése</button>
     </div>
-  </div>
-  <h1 style="text-align:center; padding-top: 150px;">BlntzPicks Main Page</h1>
-</body>
-</html>
-<div class="content">
+
+    
+    <div class="content" id="content">
         <h1>BlntzPicks by ChatGpt</h1>
         <div class="match-simulation">
             <button id="simulateBtn">Mérkőzés szimulálása</button>
@@ -63,7 +36,16 @@
                 <li>Skandináv ligák</li>
             </ul>
         </div>
+
+        
+        <div id="matches" class="matches" style="display:none;">
+            <h2>Aktuális Meccsek</h2>
+            <ul id="matchList">
+                
+            </ul>
+        </div>
     </div>
 
     <script src="script.js"></script>
-
+</body>
+</html>
