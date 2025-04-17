@@ -83,3 +83,30 @@ button#simulateBtn:hover {
     font-size: 1.2em;
     margin: 10px 0;
 }
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .popup p, .popup-btn {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .content {
+        margin-top: 20px;
+    }
+
+    .match-simulation {
+        margin-top: 20px;
+    }
+
+    .league-list ul {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .league-list li {
+        font-size: 1em;
+    }
+}
