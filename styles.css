@@ -6,20 +6,19 @@ body {
     padding: 0;
 }
 
-/* Popup üzenet stílusok */
-.popup {
+
+#popup {
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000; 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    z-index: 1000;
 }
 
 .popup p {
@@ -28,21 +27,34 @@ body {
     margin: 10px;
 }
 
-.popup-btn {
-    background-color: red;
+
+.popup-button {
+    background-color: black;
     color: white;
-    font-size: 1em;
     padding: 10px 20px;
+    margin: 10px;
     border: none;
     cursor: pointer;
-    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
-.popup-btn:hover {
-    background-color: darkred;
+.popup-button:hover {
+    background-color: #f44336; 
 }
 
-/* Fő tartalom stílusok */
+const showPopup = () => {
+    document.getElementById('popup').style.display = 'flex'; 
+};
+
+// Popup bezárása
+const closePopup = () => {
+    document.getElementById('popup').style.display = 'none'; 
+
+// A gombok kezelése
+document.getElementById('open-popup').addEventListener('click', showPopup); 
+document.getElementById('close-popup').addEventListener('click', closePopup); 
+
 .content {
     text-align: center;
     margin-top: 50px;
