@@ -2,7 +2,7 @@ const API_URL = 'https://api.sportsdata.io/v4/soccer/scores/json/GamesByDate/';
 const API_KEY = e6ae1fc33b5645daa9877834247c9e35; 
 
 
-let currentDate = new Date().toISOString().split('T')[0];
+let currentDate = new Date().toISOString().split('T')[0]2024.04.17
 
 
 window.onload = function() {
